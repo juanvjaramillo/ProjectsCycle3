@@ -1,0 +1,62 @@
+@page "/counter"
+
+<div class="row rows-cols-1 rows-cols-md-3 g-4">
+  <div class="col">
+    <div class="card mb-3" style="width: 18rem;">
+        <img src="/images/spiderman.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@ArrowsFunctionClass.function_convert_mayusc(@pelicula1)</h5>
+            <p class="card-text">@ArrowsFunctionClass.function_convert_minusc(@sinopsis_pelicula1)</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+  </div>
+  <div class="col">
+      <div class="card mb-3" style="width: 18rem;">
+      <img src="/images/star_wars.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">@ArrowsFunctionClass.function_convert_mayusc(@pelicula2)</h5>
+          <p class="card-text">@ArrowsFunctionClass.function_convert_minusc(@sinopsis_pelicula2)</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      </div>
+  </div>
+  <div class="col">
+      <div class="card mb-3" style="width: 18rem;">
+      <img src="/images/marvel.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">@ArrowsFunctionClass.function_convert_mayusc(@pelicula3)</h5>
+          <p class="card-text">@ArrowsFunctionClass.function_convert_minusc(@sinopsis_pelicula3)</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>  
+      </div>
+  </div>
+</div>
+
+<div>
+  <label for="" class="form-label">@ArrowsFunctionClass.function_convert_mayusc(pelicula1)</label>
+  <label for="" class="form-label">@ArrowsFunctionClass.function_convert_minusc(pelicula2)</label>
+  <label for="" class="form-label">@ArrowsFunctionClass.function_convert_mayusc(pelicula3)</label>
+</div>
+
+<div>
+  <button class="btn btn-info" @onclick=@clic_event_button>Da clic</button>
+  <button class="btn btn-danger" @onclick=@clic_event_cancel>Cancelar</button>
+</div>
+
+@code{
+  public string pelicula1 = "Spiderman";
+  public string pelicula2 = "Star Wars";
+  public string pelicula3 = "Dr Strange";
+  public string sinopsis_pelicula1 = "Sinopsis @pelicula1";
+  public string sinopsis_pelicula2 = "Sinopsis @pelicula2";
+  public string sinopsis_pelicula3 = "Sinopsis @pelicula3";
+
+  @* Crear métodos *@
+  public void clic_event_button(){
+    Console.WriteLine("Has dado clic en el botón");
+  }
+  public void clic_event_cancel(){
+    Console.WriteLine("Cancelaste el proceso");
+  }
+}

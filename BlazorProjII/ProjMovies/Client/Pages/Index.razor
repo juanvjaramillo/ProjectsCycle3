@@ -1,0 +1,116 @@
+﻿@page "/"
+
+<div class="container">
+  @*Carrusel/ Banner de inicio*@
+  <div id="carouselExampleSlidesOnly" class="carousel slide d-none d-lg-block" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="/images/banner_slide_placeholder_1920x800.jpg" class="d-block w-100" alt="placeholder">
+      </div>
+      <div class="carousel-item">
+        <img src="/images/banner_300.jpg" class="d-block w-100" alt="300">
+      </div>
+      <div class="carousel-item">
+        <img src="/images/banner_the_best_1.jpg" class="d-block w-100" alt="the best">
+      </div>
+      <div class="carousel-item active">
+        <img src="/images/banner_iron_man_3.jpg" class="d-block w-100" alt="ironman 3">
+      </div>
+    </div>
+  </div>
+  @*cards de películas*@
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">   
+      <div class="card">
+        <img src="/images/spiderman_350x580.jpg" class="card-img-top" alt="spiderman">
+        <div class="card-body">
+          <h5 class="card-title">@pelicula1</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Ver +</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+      <div class="card">
+        <img src="/images/star_wars_350x580.jpg" class="card-img-top" alt="star wars">
+        <div class="card-body">
+            <h5 class="card-title">@pelicula2</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Ver +</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+      <div class="card">
+        <img src="/images/dr_strange_350x580.jpg" class="card-img-top" alt="dr strange">
+        <div class="card-body">
+            <h5 class="card-title">@pelicula3</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Ver +</a>
+        </div>
+      </div>
+    </div>      
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+      <div class="card">
+        <img src="/images/filmcard_placeholder_350x580.jpg" class="card-img-top" alt="placeholder">
+        <div class="card-body">
+            <h5 class="card-title">Película_z</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Ver +</a>
+        </div>
+      </div>
+    </div>      
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+      <div class="card">
+        <img src="/images/filmcard_placeholder_350x580.jpg" class="card-img-top" alt="placeholder">
+        <div class="card-body">
+            <h5 class="card-title">Película_B</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Ver +</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+      <div class="card">
+        <img src="/images/filmcard_placeholder_350x580.jpg" class="card-img-top" alt="placeholder">
+        <div class="card-body">
+            <h5 class="card-title">Película</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Ver +</a>
+        </div>
+      </div>
+    </div>                  
+  </div>
+</div>
+
+<div>
+  <label for="" class="form-label">@function_convert_mayusc(pelicula1)</label>
+  <label for="" class="form-label">@function_convert_mayusc(pelicula2)</label>
+  <label for="" class="form-label">@function_convert_mayusc(pelicula3)</label>
+</div>
+
+<div>
+  <button class="btn btn-info" @onclick=@clic_event_button>Da clic</button>
+  <button class="btn btn-danger" @onclick=@clic_event_cancel>Cancelar</button>
+</div>
+
+@code{
+  public string pelicula1 = "Spiderman";
+  public string pelicula2 = "Star Wars";
+  public string pelicula3 = "Dr Strange";
+
+  @* Funciones flecha estructura: variable(parametros) => instrucciones; *@
+  public string function_convert_mayusc(string value) => value.ToUpper();
+  public string function_convert_minusc(string value) => value.ToLower();
+  @*   public string convert_mayusc(string value){
+    value.ToUpper();
+  } *@
+  
+  @* Crear métodos *@
+  public void clic_event_button(){
+    Console.WriteLine("Has dado clic en el botón");
+  }
+  public void clic_event_cancel(){
+    Console.WriteLine("Cancelaste el proceso");
+  }
+}
