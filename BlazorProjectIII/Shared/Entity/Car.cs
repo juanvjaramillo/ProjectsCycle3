@@ -1,10 +1,11 @@
+using System;
 namespace BlazorProjectIII.Shared.Entity
 {
     public class Car
     {
-        public static string CarType {get;set;}
-        public static string CarDescription {get;set;}
-        public static string CarImage {get;set;}
-        public static DateTime CurrentData {get;set;}
+        public string CarType {get;set;}
+        public string CarDescription {get;set;}
+        public string CarImage {get;set;}
+        public DateTime CurrentDate {get;set;}
     }
 }

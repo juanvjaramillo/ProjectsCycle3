@@ -1,0 +1,30 @@
+@page "/practicaii"
+<div class="container">
+    <div class="jumbotron">
+        <img src=@ConverCar1.CarImage class="img-fluid" alt="Responsive image">
+        <h4 class="text-center">Vehiculo:
+            <small class="text-muted">@ConverCar1.CarType</small>
+        </h4>
+        <blockquote class="blockquote text-center">
+            <h6>Descripción: <small class="text-muted">@ConverCar1.CarDescription</small></h6>
+            <footer class="blockquote-footer"> <cite title="Surce Title">@ConverCar1.CurrentDate.ToString("dd/MM/yyyy")</cite></footer>
+        </blockquote>
+    </div>
+</div>
+
+@code {
+    private Car GetSpecificCar()
+    {
+        return new Car()
+        {
+            CarType = "Convertible 1980",
+            CarDescription = "Descripcion del convertible",
+            CarImage = "/images/any.jfif",
+            CurrentDate = new DateTime(2021, 09, 20)
+        };
+    }
+    @* Creación de la instancia de la clase a la cual se le asigna GetSpecificCar *@
+    public Car ConverCar1{
+        get{return GetSpecificCar();}
+    }
+}

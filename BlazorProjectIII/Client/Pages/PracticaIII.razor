@@ -1,0 +1,51 @@
+﻿@page "/practicaiii"
+
+<div class="container">
+    <div class="jumbotron">
+        @foreach (var car in GetCarsList())
+        {
+            <div class="list-group mb-3">
+                <a href="/practicaii" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                        @*Columna que muestra la imágen del tema*@
+                        <div class="col sm-6 md-2 lg-2 xl-2 xxl-2">
+                            <img src=@car.CarImage class="img-thumbnail" alt="" height="200" width="200">
+                        </div>
+                        @*Columna que muestra la información adicional del tema*@
+                        <div class="col sm-6 md-10 lg-6 xl-10 xxl-10 text-left">
+                            <h4 class="text-left">Vehiculo:
+                                <small class="text-muted">@car.CarType</small>
+                            </h4>
+                            <p class="mb-0 text-left">Descripción: <small class="text-muted">@car.CarDescription</small></p>
+                            <footer class="blockquote-footer text-left">Fecha de publicación<cite title="Surce Title">@car.CurrentDate.ToString("dd/MM/yyyy")</cite></footer>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    @*Creamos una lista con 3 objetos de carros*@
+    private List<Car> GetCarsList()
+    {
+        return new List<Car>()
+{
+new Car{CarType = "Convertible 1980", CarDescription = "Descripcion del convertible 1", CarImage = "/images/any.jfif",
+CurrentDate = new DateTime(2021, 09, 20)},
+new Car{CarType = "Convertible 1981", CarDescription = "Descripcion del convertible 2", CarImage = "/images/any.jfif",
+CurrentDate = new DateTime(2021, 09, 20)},
+new Car{CarType = "Convertible 1982", CarDescription = "Descripcion del convertible 3", CarImage = "/images/any.jfif",
+CurrentDate = new DateTime(2021, 09, 20)},
+new Car{CarType = "Convertible 1983", CarDescription = "Descripcion del convertible 4", CarImage = "/images/any.jfif",
+CurrentDate = new DateTime(2021, 09, 20)},
+new Car{CarType = "Convertible 1984", CarDescription = "Descripcion del convertible 4", CarImage = "/images/any.jfif",
+CurrentDate = new DateTime(2021, 09, 20)},
+new Car{CarType = "Convertible 1985", CarDescription = "Descripcion del convertible 6", CarImage = "/images/any.jfif",
+CurrentDate = new DateTime(2021, 09, 20)},
+new Car{CarType = "Convertible 1986", CarDescription = "Descripcion del convertible 7", CarImage = "/images/any.jfif",
+CurrentDate = new DateTime(2021, 09, 20)},
+};
+    }
+}
