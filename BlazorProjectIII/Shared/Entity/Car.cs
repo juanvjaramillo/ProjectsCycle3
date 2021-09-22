@@ -6,6 +6,8 @@ namespace BlazorProjectIII.Shared.Entity
         public string CarType {get;set;}
         public string CarDescription {get;set;}
         public string CarImage {get;set;}
+        public string CarLink {get;set;}
         public DateTime CurrentDate {get;set;}
+
     }
 }

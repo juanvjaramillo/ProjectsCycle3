@@ -17,7 +17,8 @@
                                 <small class="text-muted">@car.CarType</small>
                             </h4>
                             <p class="mb-0 text-left">Descripción: <small class="text-muted">@car.CarDescription</small></p>
-                            <footer class="blockquote-footer text-left">Fecha de publicación<cite title="Surce Title">@car.CurrentDate.ToString("dd/MM/yyyy")</cite></footer>
+                            <footer class="blockquote-footer text-left">Fecha de publicación<cite
+                                title="Surce Title">@car.CurrentDate.ToString("dd/MM/yyyy")</cite></footer>
                         </div>
                     </div>
                 </a>
@@ -31,21 +32,42 @@
     private List<Car> GetCarsList()
     {
         return new List<Car>()
-{
-new Car{CarType = "Convertible 1980", CarDescription = "Descripcion del convertible 1", CarImage = "/images/any.jfif",
-CurrentDate = new DateTime(2021, 09, 20)},
-new Car{CarType = "Convertible 1981", CarDescription = "Descripcion del convertible 2", CarImage = "/images/any.jfif",
-CurrentDate = new DateTime(2021, 09, 20)},
-new Car{CarType = "Convertible 1982", CarDescription = "Descripcion del convertible 3", CarImage = "/images/any.jfif",
-CurrentDate = new DateTime(2021, 09, 20)},
-new Car{CarType = "Convertible 1983", CarDescription = "Descripcion del convertible 4", CarImage = "/images/any.jfif",
-CurrentDate = new DateTime(2021, 09, 20)},
-new Car{CarType = "Convertible 1984", CarDescription = "Descripcion del convertible 4", CarImage = "/images/any.jfif",
-CurrentDate = new DateTime(2021, 09, 20)},
-new Car{CarType = "Convertible 1985", CarDescription = "Descripcion del convertible 6", CarImage = "/images/any.jfif",
-CurrentDate = new DateTime(2021, 09, 20)},
-new Car{CarType = "Convertible 1986", CarDescription = "Descripcion del convertible 7", CarImage = "/images/any.jfif",
-CurrentDate = new DateTime(2021, 09, 20)},
-};
+        {
+        new Car{
+            CarType = "Convertible 1980",
+            CarDescription = "Descripcion del convertible 1",
+            CarImage = "/images/any.jfif",
+            CurrentDate = new DateTime(2021, 09, 20)},
+        new Car{
+            CarType = "Convertible 1981",
+            CarDescription = "Descripcion del convertible 2",
+            CarImage = "/images/any.jfif",
+            CurrentDate = new DateTime(2021, 09, 20)},
+        new Car{
+            CarType = "Convertible 1982",
+            CarDescription = "Descripcion del convertible 3",
+            CarImage = "/images/any.jfif",
+            CurrentDate = new DateTime(2021, 09, 20)},
+        new Car{
+            CarType = "Convertible 1983",
+            CarDescription = "Descripcion del convertible 4",
+            CarImage = "/images/any.jfif",
+            CurrentDate = new DateTime(2021, 09, 20)},
+        new Car{
+            CarType = "Convertible 1984",
+            CarDescription = "Descripcion del convertible 4",
+            CarImage = "/images/any.jfif",
+            CurrentDate = new DateTime(2021, 09, 20)},
+        new Car{
+            CarType = "Convertible 1985",
+            CarDescription = "Descripcion del convertible 6",
+            CarImage = "/images/any.jfif",
+            CurrentDate = new DateTime(2021, 09, 20)},
+        new Car{
+            CarType = "Convertible 1986",
+            CarDescription = "Descripcion del convertible 7",
+            CarImage = "/images/any.jfif",
+            CurrentDate = new DateTime(2021, 09, 20)},
+        };
     }
 }
