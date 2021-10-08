@@ -844,6 +844,303 @@
 							"templateParameterCompartment": {
 								"$ref": "AAAAAAF8RIx09gB6QGA="
 							}
+						},
+						{
+							"_type": "UMLClassView",
+							"_id": "AAAAAAF8WHa8cDMXpp0=",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "AAAAAAF8WHa8bzMVZYU="
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "AAAAAAF8WHa8cDMYfkY=",
+									"_parent": {
+										"$ref": "AAAAAAF8WHa8cDMXpp0="
+									},
+									"model": {
+										"$ref": "AAAAAAF8WHa8bzMVZYU="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAF8WHa8cDMZCd4=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMYfkY="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 176,
+											"top": 672,
+											"height": 13
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAF8WHa8cDMaaPA=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMYfkY="
+											},
+											"font": "Arial;13;1",
+											"left": 477,
+											"top": 407,
+											"width": 152.80712890625,
+											"height": 13,
+											"text": "Celebrities"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAF8WHa8cDMbIlY=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMYfkY="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 176,
+											"top": 672,
+											"width": 73.67724609375,
+											"height": 13,
+											"text": "(from Model)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAF8WHa8cDMcAak=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMYfkY="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 176,
+											"top": 672,
+											"height": 13,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 472,
+									"top": 400,
+									"width": 162.80712890625,
+									"height": 25,
+									"stereotypeLabel": {
+										"$ref": "AAAAAAF8WHa8cDMZCd4="
+									},
+									"nameLabel": {
+										"$ref": "AAAAAAF8WHa8cDMaaPA="
+									},
+									"namespaceLabel": {
+										"$ref": "AAAAAAF8WHa8cDMbIlY="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAF8WHa8cDMcAak="
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "AAAAAAF8WHa8cDMdrjA=",
+									"_parent": {
+										"$ref": "AAAAAAF8WHa8cDMXpp0="
+									},
+									"model": {
+										"$ref": "AAAAAAF8WHa8bzMVZYU="
+									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF8WH5CyDNFKIc=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMdrjA="
+											},
+											"model": {
+												"$ref": "AAAAAAF8WH5CeTNCyV4="
+											},
+											"font": "Arial;13;0",
+											"left": 477,
+											"top": 430,
+											"width": 152.80712890625,
+											"height": 13,
+											"text": "+Name: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF8WH5eFzNMZmQ=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMdrjA="
+											},
+											"model": {
+												"$ref": "AAAAAAF8WH5eBTNJjl0="
+											},
+											"font": "Arial;13;0",
+											"left": 477,
+											"top": 445,
+											"width": 152.80712890625,
+											"height": 13,
+											"text": "+DateOfBirth: DateTime",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF8WIRb6jNvDLg=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMdrjA="
+											},
+											"model": {
+												"$ref": "AAAAAAF8WIRboDNs46c="
+											},
+											"font": "Arial;13;0",
+											"left": 477,
+											"top": 460,
+											"width": 152.80712890625,
+											"height": 13,
+											"text": "+DeathDate: DateTime",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF8WH6cHjNTHJ0=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMdrjA="
+											},
+											"model": {
+												"$ref": "AAAAAAF8WH6cDTNQpKs="
+											},
+											"font": "Arial;13;0",
+											"left": 477,
+											"top": 475,
+											"width": 152.80712890625,
+											"height": 13,
+											"text": "+BirthPlace: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF8WIMo3TNeNLM=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMdrjA="
+											},
+											"model": {
+												"$ref": "AAAAAAF8WIMohjNbHec="
+											},
+											"font": "Arial;13;0",
+											"left": 477,
+											"top": 490,
+											"width": 152.80712890625,
+											"height": 13,
+											"text": "+Job: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF8WINl9DNln/s=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMdrjA="
+											},
+											"model": {
+												"$ref": "AAAAAAF8WINloDNi4tQ="
+											},
+											"font": "Arial;13;0",
+											"left": 477,
+											"top": 505,
+											"width": 152.80712890625,
+											"height": 13,
+											"text": "+Biography: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF8WITK2zN63PM=",
+											"_parent": {
+												"$ref": "AAAAAAF8WHa8cDMdrjA="
+											},
+											"model": {
+												"$ref": "AAAAAAF8WITKjzN3z0E="
+											},
+											"font": "Arial;13;0",
+											"left": 477,
+											"top": 520,
+											"width": 152.80712890625,
+											"height": 13,
+											"text": "+UriImageCelebrity: String",
+											"horizontalAlignment": 0
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 472,
+									"top": 425,
+									"width": 162.80712890625,
+									"height": 113
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "AAAAAAF8WHa8cDMeeo8=",
+									"_parent": {
+										"$ref": "AAAAAAF8WHa8cDMXpp0="
+									},
+									"model": {
+										"$ref": "AAAAAAF8WHa8bzMVZYU="
+									},
+									"font": "Arial;13;0",
+									"left": 472,
+									"top": 538,
+									"width": 162.80712890625,
+									"height": 10
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "AAAAAAF8WHa8cDMf3kQ=",
+									"_parent": {
+										"$ref": "AAAAAAF8WHa8cDMXpp0="
+									},
+									"model": {
+										"$ref": "AAAAAAF8WHa8bzMVZYU="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 88,
+									"top": 336,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "AAAAAAF8WHa8cDMgWho=",
+									"_parent": {
+										"$ref": "AAAAAAF8WHa8cDMXpp0="
+									},
+									"model": {
+										"$ref": "AAAAAAF8WHa8bzMVZYU="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 88,
+									"top": 336,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 472,
+							"top": 400,
+							"width": 162.80712890625,
+							"height": 148,
+							"nameCompartment": {
+								"$ref": "AAAAAAF8WHa8cDMYfkY="
+							},
+							"attributeCompartment": {
+								"$ref": "AAAAAAF8WHa8cDMdrjA="
+							},
+							"operationCompartment": {
+								"$ref": "AAAAAAF8WHa8cDMeeo8="
+							},
+							"receptionCompartment": {
+								"$ref": "AAAAAAF8WHa8cDMf3kQ="
+							},
+							"templateParameterCompartment": {
+								"$ref": "AAAAAAF8WHa8cDMgWho="
+							}
 						}
 					]
 				},
@@ -1038,6 +1335,79 @@
 							"name": "IsNowPlaying",
 							"visibility": "private",
 							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAF8WHa8bzMVZYU=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Celebrities",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF8WH5CeTNCyV4=",
+							"_parent": {
+								"$ref": "AAAAAAF8WHa8bzMVZYU="
+							},
+							"name": "Name",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF8WH5eBTNJjl0=",
+							"_parent": {
+								"$ref": "AAAAAAF8WHa8bzMVZYU="
+							},
+							"name": "DateOfBirth",
+							"type": "DateTime"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF8WIRboDNs46c=",
+							"_parent": {
+								"$ref": "AAAAAAF8WHa8bzMVZYU="
+							},
+							"name": "DeathDate",
+							"type": "DateTime"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF8WH6cDTNQpKs=",
+							"_parent": {
+								"$ref": "AAAAAAF8WHa8bzMVZYU="
+							},
+							"name": "BirthPlace",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF8WIMohjNbHec=",
+							"_parent": {
+								"$ref": "AAAAAAF8WHa8bzMVZYU="
+							},
+							"name": "Job",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF8WINloDNi4tQ=",
+							"_parent": {
+								"$ref": "AAAAAAF8WHa8bzMVZYU="
+							},
+							"name": "Biography",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF8WITKjzN3z0E=",
+							"_parent": {
+								"$ref": "AAAAAAF8WHa8bzMVZYU="
+							},
+							"name": "UriImageCelebrity",
+							"type": "String"
 						}
 					]
 				}

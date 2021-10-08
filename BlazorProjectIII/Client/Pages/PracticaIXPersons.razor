@@ -1,0 +1,11 @@
+@page "/person"
+@using BlazorProjectIII.Client.Pages.Components;
+@inject IServicePerson person
+
+<CardPersonsComponent Persons = "Persons"></CardPersonsComponent>
+@code{
+    private List<Person> Persons;
+    protected override void OnInitialized(){
+        Persons = person.GetPerson();
+    }
+}

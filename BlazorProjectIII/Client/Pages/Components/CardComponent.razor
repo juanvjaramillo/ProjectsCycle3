@@ -1,0 +1,67 @@
+<section>
+    <div class="jumbotron">
+        @if (Movies == null)
+        {
+            <label> <small class="text-muted">Buscnado películas</small></label>
+            <img src="/images/animate_loading.gif" alt="" height="40" width="40">
+        } else if (Movies.Count == 0) {
+            <label> <small class="tect-muted">No se encontraron películas</small></label>
+        } else {
+            <h6>Prueba</h6>
+            <div class="container-fluid">
+                <div class="row mb-3">
+                    @foreach (var movie in Movies) 
+                    {
+                        <div class = "col-md-4">
+                            <div class="card flex-md-row mb-4 box-shadow h-md-300">
+                                <div class="card-body d-flex flex-column align-items-start">
+                                    <div class="card">
+                                        <img src="@movie.UriImage" class="img-thumbnaill card-img-top">
+                                        <div class="card-body">
+                                            <h6 class="card-title">@movie.Title</h6>
+                                            <p class="text-muted">
+                                                @movie.Synopsis <br>
+                                                @movie.Genre <br>
+                                                <small>@movie.Cast</small> <br>
+                                                <small>@movie.ReleaseDate</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }   
+                </div>
+            </div>
+        }  
+    </div>
+</section>
+
+@code {
+    public List<Movie> Movies;
+
+    @*Función que retorna una lista de películas*@
+    private List<Movie> GetMovies()
+    {
+        return new List<Movie>()
+        {
+            new Movie(){Title="Lorem Ipsum 1", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 2", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 3", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 4", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 5", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 6", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 7", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 8", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 9", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 10", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false},
+            new Movie(){Title="Lorem Ipsum 11", Synopsis="Vivamus dapibus diam mauris, in ultrices urna porttitor a. Nunc a dignissim sapien. Vivamus at ipsum fringilla, aliquet erat sit amet, accumsan nibh. Pellentesque non vulputate magna. Suspendisse eget tempus mi. Aenean mollis vel tellus eget faucibus. In ut ex quis ipsum aliquam vulputate vitae venenatis mauris. Vestibulum justo augue, imperdiet ut mauris id, venenatis mollis lacus. Nulla tempor et enim sed vehicula. Nunc pulvinar nisl non nibh euismod, eu semper leo rhoncus.", ReleaseDate=new DateTime(2021,09,30), UriImage="/images/movie_placeholder_350x480.jpg", UriTriler="/", Runtime="2 hr 6 min", Genre="Drama", Cast="Mark Wystrach", Rating=4.8, IsNowPlaying=false}
+        };
+    }
+
+    @* Inluir tiempo de espera para cargar el contenido del componenete *@
+    protected override async Task OnInitializedAsync(){
+        await Task.Delay(2000);
+        Movies = GetMovies();
+    }
+}
