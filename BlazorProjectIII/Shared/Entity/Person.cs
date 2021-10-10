@@ -4,23 +4,26 @@ namespace BlazorProjectIII.Shared.Entity
 {
     public class Person
     {
-        public string PersonName {get;set;}
-        public DateTime BirthDate {get;set;}
-        /* public enum DocumentType{get;set;} */
-        public string DocumentType{get;set;}
-        public string Document{get;set;}
-        public string Photo{get;set;}
-        public string Gender{get;set;}
+        public string PersonName { get; set; }
+        public DateTime BirthDate { get; set; }
+        public DocumentType DocumentType { get; set; }
+        public string Document { get; set; }
+        public string Photo { get; set; }
+        public Gender Gender { get; set; }
     }
 
-    
-    public enum EnuDocument
+
+    public enum DocumentType
     {
-        enuCedulaCiudadana,
-        enuCedulaExtrangera,
-        enuPasaporte,
-        enuRegistroCivil
+        CedulaCiudadana = 0,
+        CedulaExtrangera = 1,
+        Pasaporte = 2,
+        RegistroCivil = 3
     }
 
-    public enum Gender{Femenino, Masculino}
+    public enum Gender
+    {
+        Femenino = 0,
+        Masculino = 1
+    }
 }
