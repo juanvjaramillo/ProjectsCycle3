@@ -1,0 +1,22 @@
+@page "/categories/create"
+
+<h6>Crear categoría de películas</h6>
+
+<EditForm Model="Category" OnValidSubmit="Create">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="form-group">
+        <label>Categoría</label>
+    </div>
+    <div>
+        <InputText class="form-control" @bind-Value = "@Category.CategoryName" ></InputText>
+        <ValidationMessage For="@(()=>Category.CategoryName)"></ValidationMessage>
+    </div>
+    <button class="btn btn-success" type="submit">Guardar</button>
+</EditForm>
+@code{
+   [Parameter] public Category Category {get; set;}
+   [Parameter] public EventCallback OnValidSubmit{get; set;} 
+    private void Create(){
+        Console.WriteLine($"Creando la categoría {Category.CategoryName}");
+    }
+}
