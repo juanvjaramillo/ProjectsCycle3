@@ -1,5 +1,22 @@
-@page "/actors/edit/{PersonId:int}"
-<h6>Editar personas</h6>
-@code{
-    [Parameter]public int PersonId {get; set;}
+@page "/actors/edit/{Id:int}"
+@using System;
+@using BlazorProjectIII.Client.Pages.Components
+
+<FormActor Actor="Actor" OnValidSubmit="Edit"></FormActor>
+
+@code {
+    [Parameter] public int Id { get; set; }
+    Actor Actor = new Actor();
+    protected override void OnInitialized()
+    {
+        Actor = new Actor()
+        {
+            Id = Id,
+            Name = "Will Smith",
+            BirthDate = DateTime.Today
+        };
+    }
+    private void Edit(){
+        Console.WriteLine("Editando actor ando");
+    }
 }

@@ -1,0 +1,9 @@
+@page "/actors/create"
+@using BlazorProjectIII.Client.Pages.Components
+<FormActor Actor="Actor" OnValidSubmit = "Create"></FormActor>
+@code{
+    private Actor Actor = new Actor();
+    void Create(){
+        Console.WriteLine("Creando actor");
+    }
+}

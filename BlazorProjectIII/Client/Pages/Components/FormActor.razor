@@ -9,16 +9,16 @@
             <div class="form-group row mb-3">
                 <div class="col-sm-8">
                     <InputDate class="form-control" @bind-Value="@Actor.BirthDate"></InputDate>
-                    <ValidationMessage For="@(()@Actor.BirthDate)"></ValidationMessage>
+                    <ValidationMessage For="@(()=>@Actor.BirthDate)"></ValidationMessage>
                 </div>
                 <div class="col-sm-4">
-                    <InputNumber class="form-control" @bind-value=@Actor.KnowCredits aria-placeholder="Cantidad de créditos"></InputNumber>
-                    <ValidationMessage For="@(()=>@Actor.Knowcredits)"></ValidationMessage>
+                    <InputNumber class="form-control" @bind-Value=@Actor.KnowCredits placeholder="Cantidad de créditos"></InputNumber>
+                    <ValidationMessage For="@(()=>@Actor.KnowCredits)"></ValidationMessage>
                 </div>
             </div>
 
             <div class="form-group">
-                <ImageComponent Label="photo" ImageSelected="ImageSelected" imageURL="@ImageURL"></ImageComponent>
+                <ImageComponent Label="photo" ImageSelected="ImageSelected" imageURL="@imageURL"></ImageComponent>
             </div>
             <div class="form-group">
                 <button class="btn btn-succes">Guardar</button>
@@ -30,18 +30,18 @@
 @code{
     string imageURL;
     [Parameter] public Actor Actor { get; set; }
-    [parameter] public EventCallback OnValidSubmit { get; set; }
-
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
     protected override void OnInitialized(){
+        @* Validamos que tenemos una foto cargada *@
         if (!string.IsNullOrEmpty(Actor.Photo))
         {
             imageURL = Actor.Photo;
             Actor.Photo = null;
         }
     }
-
+    @* imagen principal seleccionada *@
     private void ImageSelected(string imageB64){
-        Actor.photo = imageB64;
+        Actor.Photo = imageB64;
         imageURL = null;
 
     }
