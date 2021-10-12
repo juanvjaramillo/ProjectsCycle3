@@ -1,19 +1,30 @@
+using System.ComponentModel.DataAnnotations;
 using System;
 namespace BlazorProjectIII.Shared.Entity
 {
     public class Movie
     {
-        public int MovieId { get; set;}
-        public string Title { get; set;}
+        public int Id { get; set;}
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        public string Name { get; set;}
         public string Synopsis { get; set;}
-        public DateTime ReleaseDate { get; set;}
-        public string UriImage { get; set;}
-        public string UriTriler { get; set;}
-        public string Runtime { get; set;}
-        public string Genre { get; set;}
-        public string Cast { get; set;}
+        public string Poster { get; set;}
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        public DateTime Premier { get; set;}
+        public string Triler { get; set;}
         public double Rating { get; set;}
         public bool IsNowPlaying { get; set;}
+        public string ShortName {
+            get{
+                if (string.IsNullOrWhiteSpace(Name)){
+                    return null;
+                } if (Name.Length > 60) {
+                    return Name.Substring(0, 60) + "...";
+                } else {
+                    return Name;
+                }
+            }
+        }
     };
 }
 

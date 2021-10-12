@@ -28,7 +28,6 @@ namespace BlazorProjectIII.Client
 
         private static void ConfigureServices(IServiceCollection services){
             services.AddSingleton<IServiceMovie,ServiceMovie>();
-            services.AddSingleton<IServicePerson,ServicePerson>();
         }
     }
 }
