@@ -1,5 +1,4 @@
 @page "/actors/edit/{Id:int}"
-@using System;
 @using BlazorProjectIII.Client.Pages.Components
 
 <FormActor Actor="Actor" OnValidSubmit="Edit"></FormActor>
@@ -12,7 +11,8 @@
         Actor = new Actor()
         {
             Id = Id,
-            Name = "Will Smith",
+            Name = "Actor prueba",
+            KnowCredits = 18,
             BirthDate = DateTime.Today
         };
     }

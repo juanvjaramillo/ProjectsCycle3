@@ -1,12 +1,19 @@
 @page "/movies/create"
 @inject NavigationManager navigationManager
-<h6 class="display-4">Crear película</h6>
-<button @OnClick="Create">Aceptar</button>
+@using BlazorProjectIII.Client.Pages.Components
+
+<FormMovie Movie="Movie" OnValidSubmit="Create" ></FormMovie>
 
 @code{
+    private Movie Movie = new Movie();
     void Create(){
         @* Con el navigationManager vamos a redireccionar al suuario a otras rutas dentro del sistema*@
         Console.WriteLine(navigationManager.Uri);
         navigationManager.NavigateTo("movie");
+        Console.WriteLine($"Pelicula: {Movie.Name}");
+        Console.WriteLine($"Premier: {Movie.Premier}");
+        Console.WriteLine($"Esta en cartelera: {Movie.IsNowPlaying}");
+        Console.WriteLine($"Poster: {Movie.Poster}");
+        Console.WriteLine($"Sinopsis: {Movie.Synopsis}");
     }
 }

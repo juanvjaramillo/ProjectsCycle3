@@ -1,10 +1,13 @@
 <div>
-    <label class="form-label">@Label</label>
-    <div>
-        @* Solo permite el cargue de una imágen *@
-        <InputFile OnChange="OnChange" accept=".jpg, .png, .jpeg, .jfif"></InputFile>
-        @* Si quicieramos permitir el cargue de varias imagenes
-        <InputFile multiple OnChange="OnChange" accept=".jpg, .png, .jpeg, .jfif"></InputFile>*@
+    <div class="row">
+        <div class="col">
+            <label class="form-label">@Label
+                @* Solo permite el cargue de una imágen. El Inputfile se utiliza para cargar archivos  *@
+                <InputFile OnChange="OnChange" accept=".jpg, .png, .jpeg, .jfif"></InputFile>
+                @* Si quicieramos permitir el cargue de varias imagenes
+                    <InputFile multiple OnChange="OnChange" accept=".jpg, .png, .jpeg, .jfif"></InputFile>*@
+            </label>
+        </div>
     </div>
     <div>
         @if (imageT != null)
@@ -13,25 +16,26 @@
                 <div style="margin: 10px">
                     <img src="data:image/jpeg;base64, @imageT" width="300px" alt="">
                 </div>
-            </div>   
+            </div>
         }
 
         @if (ImageURL != null)
         {
             <div>
                 <div style="margin: 10px">
-                    <img src="@ImageURL" width="300px" alt="">
+                    <img src="@ImageURL" width="200px" alt="">
                 </div>
             </div>
         }
     </div>
 </div>
 
-@code{
-    [Parameter] public string Label { get; set;} = "Imagen";
-    [Parameter] public string ImageURL { get; set;}
-    [Parameter] public EventCallback<string> ImageSelected { get; set;}
+@code {
+    [Parameter] public string Label { get; set; } = "Imagen";
+    [Parameter] public string ImageURL { get; set; }
+    [Parameter] public EventCallback<string> ImageSelected { get; set; }
     private string imageT;
+    
     async Task OnChange(InputFileChangeEventArgs e)
     {
         var images = e.GetMultipleFiles();

@@ -4,7 +4,6 @@
 <FormCategory Category = "Category" OnValidSubmit="Edit"></FormCategory>
 
 @code{
-    
     [Parameter] public int Id { get; set;}
     private Category Category;
 
@@ -14,6 +13,7 @@
             Name = "Comedia"
         };
     }
+    
     private void Edit(){
         Console.WriteLine($"Actualizando el nombre de la categoría {Category.Name} con id {Category.Id}");
     }

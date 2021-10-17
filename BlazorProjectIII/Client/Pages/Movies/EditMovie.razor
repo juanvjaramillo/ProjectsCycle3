@@ -1,6 +1,26 @@
-@page "/movies/edit/{MovieId:int}"
-<h6>Editar Película</h6>
+@page "/movies/edit/{Id:int}"
+@using BlazorProjectIII.Client.Pages.Components
+<FormMovie Movie="Movie" OnValidSubmit="Edit" ></FormMovie>
 
 @code{
-    [Parameter] public int MovieId{get;set;}
+    [Parameter] public int Id {get;set;}
+    private Movie Movie;
+    protected override void OnInitialized()
+    {
+        Movie = new Movie{
+            Name = "El juego del calamar",
+            IsNowPlaying = true,
+            Synopsis = "Sinopsis de el Juego del Calamar",
+            Triler = "Triler"       
+        };
+    }
+
+    void Edit()
+    {
+        Console.WriteLine($"Pelicula: {Movie.Name}");
+        Console.WriteLine($"Premier: {Movie.Premier}");
+        Console.WriteLine($"Esta en cartelera: {Movie.IsNowPlaying}");
+        Console.WriteLine($"Poster: {Movie.Poster}");
+        Console.WriteLine($"Sinopsis: {Movie.Synopsis}");
+    }
 }
