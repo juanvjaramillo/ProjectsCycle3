@@ -2,18 +2,35 @@
 @inject NavigationManager navigationManager
 @using BlazorProjectIII.Client.Pages.Components
 
-<FormMovie Movie="Movie" OnValidSubmit="Create" ></FormMovie>
+<FormMovie Movie="Movie" OnValidSubmit="Create" CategoriasNoSeleccionadas="CategoriasnoSeleccionadas"></FormMovie>
 
-@code{
+@code {
     private Movie Movie = new Movie();
-    void Create(){
-        @* Con el navigationManager vamos a redireccionar al suuario a otras rutas dentro del sistema*@
-        Console.WriteLine(navigationManager.Uri);
-        navigationManager.NavigateTo("movie");
-        Console.WriteLine($"Pelicula: {Movie.Name}");
-        Console.WriteLine($"Premier: {Movie.Premier}");
-        Console.WriteLine($"Esta en cartelera: {Movie.IsNowPlaying}");
-        Console.WriteLine($"Poster: {Movie.Poster}");
-        Console.WriteLine($"Sinopsis: {Movie.Synopsis}");
+    private List<Category> CategoriasnoSeleccionadas = new List<Category>();
+
+    protected override void OnInitialized()
+    {
+        CategoriasnoSeleccionadas = new List<Category>(){
+            new Category(){Id = 1, Name = "Comedia"},
+            new Category(){Id = 2, Name = "Terror"},
+            new Category(){Id = 3, Name = "Drama"},
+            new Category(){Id = 4, Name = "Documental"},
+            new Category(){Id = 5, Name = "CFI"},
+            new Category(){Id = 6, Name = "Musical"},
+            new Category(){Id = 7, Name = "Acción"}
+        };
+
+    }
+
+    void Create()
+    {
+    @* Con el navigationManager vamos a redireccionar al suuario a otras rutas dentro del sistema*@
+    Console.WriteLine(navigationManager.Uri);
+    navigationManager.NavigateTo("movie");
+    Console.WriteLine($"Pelicula: {Movie.Name}");
+    Console.WriteLine($"Premier: {Movie.Premier}");
+    Console.WriteLine($"Esta en cartelera: {Movie.IsNowPlaying}");
+    Console.WriteLine($"Poster: {Movie.Poster}");
+    Console.WriteLine($"Sinopsis: {Movie.Synopsis}");
     }
 }
