@@ -1,6 +1,7 @@
 @page "/movies/create"
 @inject NavigationManager navigationManager
 @using BlazorProjectIII.Client.Pages.Components
+@inject IServiceMovie iMovie
 
 <FormMovie Movie="Movie" OnValidSubmit="Create" CategoriasNoSeleccionadas="CategoriasnoSeleccionadas"></FormMovie>
 
@@ -22,9 +23,9 @@
 
     }
 
-    void Create()
+@* Con el navigationManager vamos a redireccionar al suuario a otras rutas dentro del sistema*@
+@*  void Create()
     {
-    @* Con el navigationManager vamos a redireccionar al suuario a otras rutas dentro del sistema*@
     Console.WriteLine(navigationManager.Uri);
     navigationManager.NavigateTo("movie");
     Console.WriteLine($"Pelicula: {Movie.Name}");
@@ -32,5 +33,20 @@
     Console.WriteLine($"Esta en cartelera: {Movie.IsNowPlaying}");
     Console.WriteLine($"Poster: {Movie.Poster}");
     Console.WriteLine($"Sinopsis: {Movie.Synopsis}");
-    }
+    } *@
+
+    async void Create()
+    {
+        var httpResponse = await iMovie.Post("api/movies", Movie);
+        if (httpResponse.Error)
+        {
+            var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+            Console.WriteLine(body);                
+        }
+        else
+        {
+            navigationManager.NavigateTo("/movies");
+            Console.WriteLine(Movie.Name);
+        }
+    }  
 }

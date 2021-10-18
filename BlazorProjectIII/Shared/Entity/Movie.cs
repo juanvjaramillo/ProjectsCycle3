@@ -21,6 +21,7 @@ namespace BlazorProjectIII.Shared.Entity
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public List <CategoryMovie> CategoriesMovie { get; set;} = new List <CategoryMovie> ();
+        public List <MovieActor> MoviesActor { get; set; } = new List <MovieActor> ();
         public string ShortName {
             get{
                 if (string.IsNullOrWhiteSpace(Name)){
